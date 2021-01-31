@@ -4,7 +4,7 @@ A simple app to test reaction times. Inspired from [this](https://faculty.washin
 
 Didn't like the design so I rebuilt it ;)
 
-[Have a look <3]()
+[Have a look <3](https://reaztionz.netlify.app/)
 
 ## Built Using
 
