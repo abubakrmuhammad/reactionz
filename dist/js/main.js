@@ -41,6 +41,7 @@ class App {
   async startTest() {
     this.view.clearResults();
     this.results = [];
+    this.currentTurnNumber = 0;
 
     this.view.readyButton();
 
