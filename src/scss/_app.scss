@@ -1,0 +1,154 @@
+.app {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  &__target {
+    flex: 2;
+    min-width: 24rem;
+    border-radius: 1.6rem;
+    background-color: #e74c3c;
+    min-height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    cursor: url('/dist/images/crosshair.svg') 24 24, auto;
+
+    &--ready {
+      background-color: #2ecc71;
+    }
+  }
+
+  &__meta {
+    flex: 1;
+    min-width: 28rem;
+    padding: 3rem;
+    background-color: $bg2-color;
+    border-radius: $border-radius;
+
+    .meta-title {
+      font-family: 'Rajdhani', sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .instructions {
+      margin-bottom: 2rem;
+
+      &__list {
+        color: $text-color;
+        font-size: 1.4rem;
+        margin-left: 1.5rem;
+        line-height: 1.5;
+
+        li:not(:last-of-type) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    .results {
+      margin-bottom: 2rem;
+
+      .meta-title {
+        margin-bottom: 0;
+      }
+
+      &__table {
+        width: 100%;
+        border-collapse: collapse;
+
+        tr {
+          height: 4.8rem;
+
+          td:nth-child(1) {
+            border-top-left-radius: $border-radius-small;
+            border-bottom-left-radius: $border-radius-small;
+          }
+          td:nth-child(3) {
+            border-top-right-radius: $border-radius-small;
+            border-bottom-right-radius: $border-radius-small;
+          }
+        }
+
+        tbody > tr:nth-child(odd) {
+          background-color: $bg3-color;
+        }
+
+        th {
+          font-size: 1.4rem;
+          line-height: 1.5;
+          color: $text-color-dense;
+          font-weight: bold;
+          width: 25%;
+        }
+
+        td {
+          text-align: center;
+          font-weight: 500;
+          color: $text-color;
+          font-size: 1.4rem;
+        }
+
+        td:nth-child(1) {
+          font-weight: bold;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+          text-align: left;
+          width: 50%;
+          padding-left: 1rem;
+        }
+
+        tfoot {
+          tr {
+            height: 6.4rem;
+          }
+
+          td {
+            font-weight: bold;
+            color: $text-color-dense;
+          }
+
+          .grade {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+
+    .start {
+      &__button {
+        width: 100%;
+        height: 6rem;
+        border-radius: $border-radius-small;
+        border: none;
+        background-color: #2ecc71;
+        color: #fff;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:not(:disabled):hover {
+          background-color: #27ae60;
+        }
+
+        &:disabled {
+          cursor: default;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
