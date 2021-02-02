@@ -14,13 +14,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24rem;
     font-family: 'Rajdhani', sans-serif;
+    font-size: 5vw;
     font-weight: 600;
-    cursor: url('/dist/images/crosshair.svg') 24 24, auto;
+    user-select: none;
+    cursor: url('../images/crosshair.svg') 24 24, auto;
 
     &--ready {
       background-color: #2ecc71;
+    }
+
+    &--countdown {
+      font-size: 24rem;
     }
   }
 
